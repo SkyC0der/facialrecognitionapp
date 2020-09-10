@@ -71,8 +71,7 @@ class App extends Component {
 
   componentDidMount(){
     fetch('https://majestic-sequoia-49816.herokuapp.com/')
-      .then(response => response.json())
-      .then(console.log);
+      .then(response => response.json());
   }
 
   calculateFaceLocation = (data) => {
@@ -99,7 +98,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl : this.state.input})
-    fetch('https://majestic-sequoia-49816.herokuapp.com//imageurl',{
+    fetch('https://majestic-sequoia-49816.herokuapp.com/imageurl',{
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
